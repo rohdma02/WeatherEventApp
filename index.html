@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+    Sources/Ideas:
+    https://flexiple.com/javascript/javascript-capitalize-first-letter
+    https://www.codexworld.com/how-to/allow-only-alphabets-in-html-text-input/
+    https://getbootstrap.com/docs/5.0/forms/validation/
+    https://www.shecodes.io/athena/27147-how-to-write-the-degree-symbol-in-html#
+    https://getbootstrap.com/docs/4.0/content/tables/
+    https://www.codingnepalweb.com/weather-app-project-html-javascript/
+    https://uizard.io/templates/web-app-templates/weather-web-app-light/
+-->
+
+<head>
+    <title>mashup project</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Weather-Events App</h1>
+    <div class="container">
+        <div class="weatherInput">
+            <h2>Enter a City Name</h2>
+            <input type="text" id="cityName" placeholder="Toronto, New York, London, Tokyo" required
+                onkeydown="return /[a-zA-Z\s]/i.test(event.key)" title="Please provide a valid city">
+
+            <button class="btn btn-primary" id="fetchData">Search</button>
+            <div class="separator"></div>
+            <h2>Cities search history</h2>
+            <table class="table table-striped table-light">
+                <thead>
+                    <tr>
+                        <th scope="col">Order</th>
+                        <th scope="col">City</th>
+                        <th scope="col">Weather</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="historyTable">
+
+                </tbody>
+            </table>
+
+            <button class="btn btn-primary col" onclick="controller.removeAll()">Remove all</button>
+
+        </div>
+
+        <div class="weatherData">
+            <h2 id="cityNameWeather">Today weather</h2>
+            <div class="currentWeather">
+
+                <div class="details">
+                    <!-- Display WEATHER INFO BASED ON A CITY -->
+                </div>
+            </div>
+            <div class="cityEvents">
+                <h2 id="cityNameEvent">Today events</h2>
+                <table class="table table-striped table-primary">
+                    <thead>
+                        <tr>
+                            <th class="col">City</th>
+                            <th class="col">Event Name</th>
+                            <th class="col">Event Link</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableEvents">
+                        <tr>
+                            <!-- Display City events -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/model.js"></script>
+    <script type="text/javascript" src="js/view.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+</body>
+
+</html>

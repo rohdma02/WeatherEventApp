@@ -1,0 +1,35 @@
+//Mateus Rohden --> MR
+
+Ideas to name the web app
+MR-City Explorer app, City, Weather and Events app
+
+How to present the data
+MR-One div with the Weather Data and maybe an icon, animation....
+MR-One div with a table of the events Data(title, city, time, link)
+MR-One div with the history of the cities searched in the local storage, after clicking
+in one of them it automatically display the data in the weather div and the events div about that city.
+
+
+Progress of 10/17/2023
+MR-Finish a lot in the front end part and started the MVC pattern,
+not sure if it is correct but so far it works when you search for city, it 
+display the weather about the city and nearby events. 
+
+Progress of 10/18/2023
+-MR-Finish a lot of the backend part, local storage, and finihsed the MVC pattern,
+delete function, history of cities function, clean the code a little bit, when a city is added it automatically display the history of the searched cities.
+When a city is deleted it Today weather and Today events should be back to initial part
+Remove all function
+Reset the search city input after searched.
+Change the Today weather/events in {cityName} 
+When removed all, the info for weather and events is empty
+Error handling, invalid cities, invalid input for city.
+Action should have the buttons side by side
+
+Progress of 10/19/2023
+-MR Finish the little details, changing the colors, type of text, adding more art to the website.
+-Testing the website completetly
+
+
+Still to finish
+?
